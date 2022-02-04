@@ -32,7 +32,8 @@ body {
 }
 
 .wy-menu-vertical li.current>a, .wy-menu-vertical li.on a {
-	background: #00add5
+	background: #00add5;
+	color: #fefefe;
 }
 
 .wy-menu-vertical li.current a {
@@ -49,4 +50,14 @@ body {
 
 .wy-menu-vertical li.current>a:hover, .wy-menu-vertical li.on a:hover {
 	background: #01cfff;
+}
+
+.wy-menu-vertical li.toctree-l2 a, .wy-menu-vertical li.toctree-l3 a, .wy-menu-vertical li.toctree-l4 a, .wy-menu-vertical li.toctree-l5 a, .wy-menu-vertical li.toctree-l6 a, .wy-menu-vertical li.toctree-l7 a, .wy-menu-vertical li.toctree-l8 a, .wy-menu-vertical li.toctree-l9 a, .wy-menu-vertical li.toctree-l10 a {
+	color: #fefefe;
+}
+
+.rst-content code, .rst-content tt, code {
+	background: #444;
+	border-color: #000;
+	color: #fbff85;
 }
