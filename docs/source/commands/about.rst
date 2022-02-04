@@ -1,6 +1,6 @@
 About Command
 =============
 
-``pr about``
+``/pr about``
 
 The about command shows version and author information.
