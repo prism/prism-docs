@@ -6,7 +6,7 @@ wands, and so much more. Tracking so good, the NSA stole our name.
 
 .. note::
 
-   This project is under active development.
+   Prism v4 is under active development. For Prism v2.x or v3.x, you can find old `documentation here <https://prism-bukkit.readthedocs.io/en/latest>`_
 
 Contents
 --------
@@ -15,3 +15,4 @@ Contents
 
    setup
    config
+   commands
