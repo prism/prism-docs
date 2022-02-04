@@ -23,10 +23,6 @@ body {
 	background: #282b38;
 }
 
-.wy-nav-content-wrap, .wy-nav-content {
-	height: 100%;
-}
-
 .wy-menu-vertical li.current {
 	background: #088AA8;
 }
@@ -59,5 +55,12 @@ body {
 .rst-content code, .rst-content tt, code {
 	background: #444;
 	border-color: #000;
+}
+
+.rst-content code.literal, .rst-content tt.literal {
 	color: #fbff85;
+}
+
+.wy-menu-vertical li.toctree-l2.current>a, .wy-menu-vertical li.toctree-l2.current li.toctree-l3>a {
+	background: #01cfff;
 }
