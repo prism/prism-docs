@@ -26,5 +26,6 @@ Prism 4 **can** update your old MySQL database, but we suggest starting fresh. I
 1. v4's data serialization process is far better than v3, however this means
 it's also incompatible. Lookups will generally work for blocks but rollbacks will not. (Invalid 
 data should be safely skipped.) Entity data is pretty much inaccessible.
+
 2. v3 tracked non-player "causes" as fake players. v4 can't separate those when migrating data.
 

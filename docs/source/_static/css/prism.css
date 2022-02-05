@@ -64,3 +64,11 @@ body {
 .wy-menu-vertical li.toctree-l2.current>a, .wy-menu-vertical li.toctree-l2.current li.toctree-l3>a {
 	background: #01cfff;
 }
+
+.highlight {
+	background: #262a38;
+}
+
+.rst-content div[class^=highlight], .rst-content pre.literal-block {
+	border: 0;
+}
