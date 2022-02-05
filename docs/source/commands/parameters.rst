@@ -1,12 +1,16 @@
 Parameters
 ==========
 
+.. contents::
+
 .. _parameters:
 
 Parameters
 ----------
 
 Parameters are optional ways to filter query results. They're the same for lookups, rollbacks, restores, and purges.
+
+They are always entered after the command you're using. For example ``/pr lookup a:break p:viveleroi``.
 
 A query with no parameters will return everything.
 
