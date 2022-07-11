@@ -37,6 +37,7 @@ body {
 
 .wy-menu-vertical li.current>a, .wy-menu-vertical li.on a {
 	background: rgb(148 163 184);
+	border: 0;
 }
 
 .wy-menu-vertical li.current a {
