@@ -77,7 +77,7 @@ Supports multiple (comma seperated)!
 
 "EntityType" is a term the Bukkit API uses to define mobs that exist in vanilla Minecraft.
 
-``e:cow``` will query activities that acted upon cows.
+``e:cow`` will query activities that acted upon cows.
 
 .. _in:
 
@@ -86,7 +86,7 @@ In Parameter
 
 Use the ``in:(chunk|world)`` parameter to confine the search to a pre-defined boundary.
 
-- ``chunk``` uses your current chunk. It sets the lower and upper bound coordinates to that of the chunk you stand in.
+- ``chunk`` uses your current chunk. It sets the lower and upper bound coordinates to that of the chunk you stand in.
 - ``world`` uses your current world, without coordinate criteria. 
 
 This parameter automatically limits the search to your current world.
@@ -150,9 +150,11 @@ Also see :ref:`before`.
 World Parameter
 ---------------
 
-Use the ``world:[worldname]`` parameter to confine the search the given world.
+Use the ``world:[worldname]`` parameter to confine the search to the given world.
 
 For example, ``world:resource`` would include records logged in the world named "resource".
+
+For you current world, ``in:world`` works exactly the same.
 
 .. _timecodes:
 
@@ -163,7 +165,7 @@ Prism uses a user-friendly short-hand to define a point in time. They can be use
 
 The available time codes are always in the format ``[number][unit]``:
 
-- ``s``` = second
+- ``s`` = second
 - ``m`` = minute
 - ``h`` = hour
 - ``d`` = day
