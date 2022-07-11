@@ -1,9 +1,11 @@
 Filters
 =======
 
-Filters allow you customize rules for data recording. While you can completely disable events in ``prism.conf``, filters allow much greater control. Filters tell prism to allow or ignore events that match specific criteria - worlds, actions, materials, players, and more.
+Filters allow you to customize rules for data recording. While you can completely disable events in ``prism.conf``, filters allow finer control. Filters tell prism to allow or ignore events that match specific criteria - worlds, actions, materials, players, and more.
 
-For example, you can ignore recording specific blocks like dirt and stone in a resource world. Resource worlds are meant to be destroyed and harvests so this cuts down on millions of rows of useless information, yet still allows you to record important information like who mined diamond.
+For example, many servers have harvest-only "resource" worlds which could generate millions of useless activity logs. No one really cares who mined dirt and stone in a resource world, which is where filters come in.
+
+Filters help you avoid recording data that you don't want. Reducing what gets saved to your database will improve performance and disk usage.
 
 .. _writing:
 
@@ -29,11 +31,11 @@ The ``behavior`` property must be set to one of these choices:
 
 Next, you need at least one **condition**. Conditions are how a filter matches activities.
 
-Available conditions are:
+Currently available conditions are:
 
 * ``worlds`` - A list of world names
 * ``materials`` - A list of block or item `Material <https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html>`_
-* ``actions`` - A list of action types
+* ``actions`` - A list of actions (see :doc:`actions`)
 
 To achieve our example of ignoring common blocks in a resource world, we could use this:
 
@@ -58,7 +60,7 @@ To achieve our example of ignoring common blocks in a resource world, we could u
 	    }
 	]
 
-This would match all actions (block-break, item-drop, etc) that involve dirt, grass_block, etc, only in the world "resource". Because it's set to ignore, this will prevent prism from recording these events. 
+This would match all actions that involve dirt, grass_block, etc, only in the world "resource". Because it's set to ignore, this will prevent prism from recording these events. 
 
 The list of blocks to ignore might get very long in this scenario. Instead, we could write this to specifically allow blocks:
 

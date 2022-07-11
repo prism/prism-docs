@@ -37,11 +37,11 @@ body {
 
 .wy-menu-vertical li.current>a, .wy-menu-vertical li.on a {
 	background: rgb(148 163 184);
-	border: 0;
+	border: none;
 }
 
 .wy-menu-vertical li.current a {
-	border-right-color: #088AA8;
+	border: none;
 }
 
 .wy-menu-vertical li.current a:hover {
@@ -81,7 +81,16 @@ body {
 }
 
 .highlight {
-	background: #262a38;
+	background: rgb(51 65 85);
+	color: #fff;
+}
+
+.hightlight .o {
+	color: rgb(248 250 252);
+}
+
+.hightlight .n {
+	color: rgb(207 250 254);
 }
 
 .rst-content div[class^=highlight], .rst-content pre.literal-block {

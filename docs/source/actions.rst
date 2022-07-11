@@ -9,6 +9,9 @@ Prism records most actions by default but they can be disabled in the config.
 
 The following is a list of all actions Prism v4 can monitor.
 
+- `Default` indicates whether Prism monitors this action by default. Some are disabled for performance or spam reasons.
+- `Reversible` indicates whether the action can be reversed (see :doc:`modifications`)
+
 +-----------------+----------------------------------+----------+-------------+
 | Action          | Monitors                         | Default? | Reversible? |
 +=================+==================================+==========+=============+
