@@ -17,8 +17,10 @@ Contents
    setup
    v4_v_v3
    config
+   databases
    actions
    commands
+   permissions
    modifications
    wands
 

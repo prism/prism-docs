@@ -43,7 +43,7 @@ To lookup multiple specific actions, use ``/pr l a:block-break,block-place`` (in
 At Parameter
 ----------------
 
-Use the ``at:[x],[y],[z]`` parameter to confine the search to a single coordinate. Similar to wand usage.
+Use the ``at:[x],[y],[z]`` parameter to confine or center the search on a single coordinate. Similar to wand usage.
 
 For example, ``at:0,0,0`` would search exclusively for activities affecting that block. 
 
@@ -59,6 +59,8 @@ Before Parameter
 Use the ``before:[time code]`` parameter to confine the search to activities that occured before the given time.
 
 For example, ``before:3d`` would include records logged before three days ago. More recent records would be excluded. 
+
+For help with time codes, see :ref:`timecodes`.
 
 Also see :ref:`since`.
 
@@ -159,7 +161,7 @@ For you current world, ``in:world`` works exactly the same.
 Timecodes
 ---------
 
-Prism uses a user-friendly short-hand to define a point in time. They can be used individually or combined.
+Prism uses a user-friendly short-hand to define a point in time. Timecodes can be used individually or combined.
 
 The available time codes are always in the format ``[number][unit]``:
 
