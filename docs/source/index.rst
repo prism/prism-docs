@@ -18,6 +18,7 @@ Contents
    v4_v_v3
    config
    commands
+   wands
 
 
 History TL;DR
