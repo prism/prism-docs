@@ -14,7 +14,7 @@ They are always entered after the command you're using. For example ``/pr lookup
 
 A query with no parameters will return everything.
 
-Parameters act as an "AND" condition, but parameters that support multiple entries act as an "OR". You may need to run multiple commands if your parameters might conflict. For example ``p:viveleroi m:stone e:cow`` will return "No Results" because there's no way all three values can exist in a single record. If you truly need to be this exact, split it up into `p:viveleroi m:stone` and `p:viveleroi e:cow`.
+Parameters act as an "AND" condition, but parameters that support multiple entries act as an "OR". You may need to run multiple commands if your parameters might conflict. For example ``p:viveleroi m:stone e:cow`` will return "No Results" because there's no way all three values can exist in a single record. If you truly need to be this exact, split it up into ``p:viveleroi m:stone`` and ``p:viveleroi e:cow``.
 
 However, a single parameter that accepts multiple entries will work as expected. ``p:kermit,fozzy m:stone`` will find records in which kermit **or** fozzy acted upon stone.
 
@@ -40,6 +40,19 @@ To lookup all "break" actions, use: ``/pr l a:break`` (includes **any** actions 
 
 To lookup multiple specific actions, use ``/pr l a:block-break,block-place`` (includes **only** results for these two actions)
 
+.. _at:
+
+At Parameter
+----------------
+
+Use the ``at:[x],[y],[z]`` parameter to confine the search to a single coordinate. Similar to wand usage.
+
+For example, ``at:0,0,0`` would search exclusively for activities affecting that block. 
+
+The :ref:`radius`, :ref:`in<in:chunk>` pr :ref:`world` parameters will use `this` location as the center instead of your player's location.
+
+This can make it easy to search for a radius around a location you're not currently at.
+
 .. _before:
 
 Before Parameter
@@ -58,7 +71,7 @@ Entity Parameter
 
 Use the ``e:`` parameter to list one or more entity types.
 
-* ``e:[entitytype]``
+- ``e:[entitytype]``
 
 Supports multiple (comma seperated)!
 
@@ -85,7 +98,7 @@ Materials Parameter
 
 Use the ``m:`` parameter to list one or more materials.
 
-* ``m:[material]``
+- ``m:[material]``
 
 Supports multiple (comma seperated)!
 
@@ -100,7 +113,7 @@ Player Parameter
 
 Use the ``p:`` parameter to list one or more players.
 
-* ``p:[playername]``
+- ``p:[playername]``
 
 Supports multiple (comma seperated)!
 
@@ -131,6 +144,15 @@ For example, ``since:1h`` would include records logged after one hour ago. Older
 For help with time codes, see :ref:`timecodes`.
 
 Also see :ref:`before`.
+
+.. _world:
+
+World Parameter
+---------------
+
+Use the ``world:[worldname]`` parameter to confine the search the given world.
+
+For example, ``world:resource`` would include records logged in the world named "resource".
 
 .. _timecodes:
 
