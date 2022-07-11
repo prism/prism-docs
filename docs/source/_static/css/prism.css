@@ -27,12 +27,16 @@ body {
 	background: rgb(226 232 240);
 }
 
+.wy-menu-vertical a {
+	color: rgb(15 23 42);
+}
+
 .wy-menu-vertical a:hover {
 	background: rgb(241 245 249)
 }
 
 .wy-menu-vertical li.current>a, .wy-menu-vertical li.on a {
-	background: rgb(100 116 139);
+	background: rgb(148 163 184);
 }
 
 .wy-menu-vertical li.current a {
@@ -40,15 +44,16 @@ body {
 }
 
 .wy-menu-vertical li.current a:hover {
-	background: #01cfff;
+	background: rgb(226 232 240);
 }
 
 .wy-menu-vertical li.toctree-l1.current>a {
-	border-color: #00add5
+	border: none;
 }
 
-.wy-menu-vertical li.current>a:hover, .wy-menu-vertical li.on a:hover {
-	background: #01cfff;
+.wy-menu-vertical li.on a:hover {
+	background: rgb(241 245 249);
+	font-weight: 700;
 }
 
 .wy-menu-vertical li.toctree-l2 a, .wy-menu-vertical li.toctree-l3 a, .wy-menu-vertical li.toctree-l4 a, .wy-menu-vertical li.toctree-l5 a, .wy-menu-vertical li.toctree-l6 a, .wy-menu-vertical li.toctree-l7 a, .wy-menu-vertical li.toctree-l8 a, .wy-menu-vertical li.toctree-l9 a, .wy-menu-vertical li.toctree-l10 a {
@@ -57,15 +62,21 @@ body {
 
 .rst-content code, .rst-content tt, code {
 	background: rgb(254 249 195);
-	border-color: #000;
+	border-color: rgb(253 224 71);
 }
 
 .rst-content code.literal, .rst-content tt.literal {
 	color: rgb(153 27 27);
+	white-space: nowrap;
 }
 
 .wy-menu-vertical li.toctree-l2.current>a, .wy-menu-vertical li.toctree-l2.current li.toctree-l3>a {
-	background: #01cfff;
+	background: rgb(203 213 225);
+}
+
+.wy-menu-vertical li.toctree-l2.current>a, .wy-menu-vertical li.toctree-l2.current li.toctree-l3>a:hover {
+	background: rgb(226 232 240);
+	font-weight: 700;
 }
 
 .highlight {
