@@ -15,7 +15,11 @@ It works by telling your game client the blocks changed, just not the server.
 
 The preview rollback command will preview any reversible changes based on your search parameters.
 
-To understand the parameters available and their use, please see :ref:`parameters`.
+To understand the parameters available and their use, please see :doc:`parameters`.
+
+.. _prs:
+
+Preview support for restores is unfinished.
 
 .. _pra:
 

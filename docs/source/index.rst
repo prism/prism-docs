@@ -17,7 +17,9 @@ Contents
    setup
    v4_v_v3
    config
+   actions
    commands
+   modifications
    wands
 
 

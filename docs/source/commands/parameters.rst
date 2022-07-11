@@ -3,8 +3,6 @@ Parameters
 
 .. contents::
 
-.. _parameters:
-
 Parameters
 ----------
 

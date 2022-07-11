@@ -7,6 +7,7 @@ All commands are prefixed with ``prism`` (or ``pr`` for short).
 
    commands/about
    commands/lookup
+   commands/near
    commands/rollback
    commands/restore
    commands/preview
