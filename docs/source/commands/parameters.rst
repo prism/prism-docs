@@ -14,9 +14,9 @@ They are always entered after the command you're using. For example ``/pr lookup
 
 A query with no parameters will return everything.
 
-Parameters act as an "AND" condition, but parameters that support multiple entries act as an "OR". You may need to run multiple commands if your parameters might conflict. For example `p:viveleroi m:stone e:cow` will return "No Results" because there's no way all three values can exist in a single record. If you truly need to be this exact, split it up into `p:viveleroi m:stone` and `p:viveleroi e:cow`.
+Parameters act as an "AND" condition, but parameters that support multiple entries act as an "OR". You may need to run multiple commands if your parameters might conflict. For example ``p:viveleroi m:stone e:cow`` will return "No Results" because there's no way all three values can exist in a single record. If you truly need to be this exact, split it up into `p:viveleroi m:stone` and `p:viveleroi e:cow`.
 
-However, a single parameter that accepts multiple entries will work as expected. `p:kermit,fozzy m:stone` will find records in which kermit **or** fozzy acted upon stone.
+However, a single parameter that accepts multiple entries will work as expected. ``p:kermit,fozzy m:stone`` will find records in which kermit **or** fozzy acted upon stone.
 
 .. _actions:
 
@@ -47,7 +47,7 @@ Before Parameter
 
 Use the ``before:[time code]`` parameter to confine the search to activities that occured before the given time.
 
-For example, `before:3d` would include records logged before three days ago. More recent records would be excluded. 
+For example, ``before:3d`` would include records logged before three days ago. More recent records would be excluded. 
 
 Also see :ref:`since`.
 
@@ -64,7 +64,7 @@ Supports multiple (comma seperated)!
 
 "EntityType" is a term the Bukkit API uses to define mobs that exist in vanilla Minecraft.
 
-`e:cow` will query activities that acted upon cows.
+``e:cow``` will query activities that acted upon cows.
 
 .. _in:
 
@@ -73,8 +73,8 @@ In Parameter
 
 Use the ``in:(chunk|world)`` parameter to confine the search to a pre-defined boundary.
 
-- `chunk` uses your current chunk. It sets the lower and upper bound coordinates to that of the chunk you stand in.
-- `world` uses your current world, without coordinate criteria. 
+- ``chunk``` uses your current chunk. It sets the lower and upper bound coordinates to that of the chunk you stand in.
+- ``world`` uses your current world, without coordinate criteria. 
 
 This parameter automatically limits the search to your current world.
 
@@ -91,7 +91,7 @@ Supports multiple (comma seperated)!
 
 "Materials" is a term the Bukkit API uses to define blocks and items that exist in vanilla Minecraft.
 
-`m:stone` will query activities that acted upon "stone" blocks. Currently matches are exact so you'll need to list every stone variant if you intend to include them.
+``m:stone`` will query activities that acted upon "stone" blocks. Currently matches are exact so you'll need to list every stone variant if you intend to include them.
 
 .. _player:
 
@@ -106,7 +106,7 @@ Supports multiple (comma seperated)!
 
 Searches for activities caused by a player.
 
-`p:viveleroi` will query activities in which `viveleroi` was the cause.
+``p:viveleroi`` will query activities in which ``viveleroi`` was the cause.
 
 .. _radius:
 
@@ -115,7 +115,7 @@ Radius Parameter
 
 Use the ``r:[number]`` parameter to confine the search to a radius around you.
 
-If you're standing at (x/y/z) 0,0,0 and use `r:5`, the search will find records with coordinates between -5,-5,-5 and 5,5,5.
+If you're standing at (x/y/z) 0,0,0 and use ``r:5``, the search will find records with coordinates between -5,-5,-5 and 5,5,5.
 
 This parameter automatically limits the search to your current world.
 
@@ -126,7 +126,7 @@ Since Parameter
 
 Use the ``since:[time code]`` parameter to confine the search to activities that occured after the given time.
 
-For example, `since:1h` would include records logged after one hour ago. Older records would be excluded.
+For example, ``since:1h`` would include records logged after one hour ago. Older records would be excluded.
 
 For help with time codes, see :ref:`timecodes`.
 
@@ -139,18 +139,18 @@ Timecodes
 
 Prism uses a user-friendly short-hand to define a point in time. They can be used individually or combined.
 
-The available time codes are always in the format `[number][unit]`:
+The available time codes are always in the format ``[number][unit]``:
 
-- `s` = second
-- `m` = minute
-- `h` = hour
-- `d` = day
-- `w` = week
+- ``s``` = second
+- ``m`` = minute
+- ``h`` = hour
+- ``d`` = day
+- ``w`` = week
 
 Example timecodes:
 
-- `3w` = 3 weeks
-- `1h30m` = 1 hour, 30 minutes (`90m` also works)
-- `1d12h` = 1 day, 12 hours
+- ``3w`` = 3 weeks
+- ``1h30m`` = 1 hour, 30 minutes (``90m`` also works)
+- ``1d12h`` = 1 day, 12 hours
 
 These can be used in any parameter which supports timecodes.
