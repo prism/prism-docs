@@ -23,6 +23,7 @@ Contents
    permissions
    modifications
    wands
+   api
 
 
 History TL;DR

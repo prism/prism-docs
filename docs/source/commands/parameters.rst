@@ -64,10 +64,31 @@ For help with time codes, see :ref:`timecodes`.
 
 Also see :ref:`since`.
 
+.. _cause:
+
+Cause Parameter
+-------------------
+
+Use the ``cause:`` parameter to search for activities with a specific non-player cause.
+
+- ``cause:[causename]``
+
+"Causes" are names of any non-player "actor" that initiated an activity.
+
+For example when axolotls kill glow squid, the ``entity`` is ``glow_squid`` and the ``cause`` is ``axolotl``.
+
+A search for ``cause:axolotl`` will return mobs killed by an axolotl.
+
+A search for ``cause:lava`` will return a lot of bat deaths.
+
+"Cause Names" will usually be block or entity names, or "environment", but may include other things.
+
+Players are a special kind of cause. To search for player-caused activities see :ref:`player`.
+
 .. _entity:
 
 Entity Parameter
--------------------
+----------------
 
 Use the ``e:`` parameter to list one or more entity types.
 
