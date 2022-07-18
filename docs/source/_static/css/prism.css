@@ -85,16 +85,32 @@ body {
 	color: #fff;
 }
 
-.highlight .mi {
+.highlight .mi, .highlight s {
 	color: #fff;
+}
+
+.highlight .c1 {
+	color: #e3e3e3;
+}
+
+.highlight .nf {
+	color: #7cc7fc;
 }
 
 .highlight .o {
 	color: rgb(248 250 252);
 }
 
-.highlight .n {
+.highlight .n, .highlight .na {
 	color: rgb(207 250 254);
+}
+
+.highlight .nd {
+	color: #f7ff87;
+}
+
+.highlight .kd {
+	color: #ffdb9e;
 }
 
 .rst-content div[class^=highlight], .rst-content pre.literal-block {
