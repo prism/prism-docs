@@ -85,6 +85,10 @@ body {
 	color: #fff;
 }
 
+.highlight .mi {
+	color: #fff;
+}
+
 .highlight .o {
 	color: rgb(248 250 252);
 }

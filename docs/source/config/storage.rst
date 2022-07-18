@@ -27,7 +27,7 @@ However, you can define a custom ``hikari.properties`` file in the plugin's conf
 
 An example file might look like:
 
-.. code-block::
+.. code-block:: properties
 
     dataSourceClassName=com.mysql.cj.jdbc.MysqlDataSource
     dataSource.user=somePrismUser

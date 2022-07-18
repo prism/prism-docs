@@ -7,7 +7,7 @@ In your main plugin class' ``onEnable`` method, look for and hook Prism.
 
     Add "Prism" to your plugin.yml's ``depend`` array.
 
-.. code-block::
+.. code-block:: java
 
     @Override
     public void onEnable() {
