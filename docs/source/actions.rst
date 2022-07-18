@@ -23,7 +23,7 @@ The following is a list of all actions Prism v4 can monitor.
 +-----------------+----------------------------------+----------+-------------+
 | hanging-break   | frames/paintings broken          | Yes      | Yes         |
 +-----------------+----------------------------------+----------+-------------+
-| item-drop       | items dropped by mob/block       | Yes      | Yes         |
+| item-drop       | items dropped by player          | Yes      | Yes         |
 +-----------------+----------------------------------+----------+-------------+
 | vehicle-enter   | mob/player enters boat/minecart  | Yes      | No          |
 +-----------------+----------------------------------+----------+-------------+

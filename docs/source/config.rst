@@ -11,5 +11,6 @@ Because ``.conf`` files generate with comments explaining the settings, this pag
 
 .. toctree::
 
+   config/storage
    config/filters
    config/messaging
