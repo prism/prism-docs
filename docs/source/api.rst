@@ -1,4 +1,7 @@
 API
 ===
 
-Coming soon.
+.. toctree::
+
+   api/setup
+   api/usage
