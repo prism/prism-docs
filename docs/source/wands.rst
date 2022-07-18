@@ -23,7 +23,7 @@ When a wand is active:
 .. _deactivate-wand:
 
 Deactivate a Wand
----------------
+-----------------
 
 To deactive a wand, use ``pr wand``.
 
@@ -32,7 +32,7 @@ To deactive a wand, use ``pr wand``.
 Wands
 ---------------
 
-The following wands are availabke:
+The following wands are available:
 
 - ``inspect`` - Queries activities for the clicked location.
 - ``rollback`` - Reverses reversible activities for the clicked location.
