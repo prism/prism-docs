@@ -17,3 +17,5 @@ Installation
 ------------
 
 Like any bukkit plugin, drag and drop the jar into your ``plugins`` folder and boot the server once to generate configs.
+
+Next, configure the plugin and setup your database. :doc:`config`.

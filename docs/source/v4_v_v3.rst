@@ -1,7 +1,7 @@
 v4_v_v3
 =======
 
-Prism version 4 (v4) was a complete rewrite. v3 was nearly a decade old and never kept up with Minecraft or the development community. While v4 will feel extremely familiar, there are some important differences.
+Prism version 4 (v4) is a complete rewrite. v3 was nearly a decade old and never kept up with Minecraft or the development community. While v4 will feel extremely familiar, there are some important differences.
 
 .. _differences:
 
@@ -17,15 +17,15 @@ Prism version 4 (v4) was a complete rewrite. v3 was nearly a decade old and neve
 Upgrading
 ---------
 
-Prism 4 **can** update your old MySQL database, but we suggest starting fresh. If you update, do **not** do so until v4 is released and allow plenty of time for the process to complete. It can take a while.
+Unfortunately there is no way to convert between v3 databases and v4.
 
-.. note::
-
-	A schema change will lock every row in your database. If you run your own MySQL server, be sure your innodb_buffer_pool_size is large enough to handle the size of your ``prism_data`` table. See `Configuring InnoDB Buffer Pool Size <https://dev.mysql.com/doc/refman/5.7/en/innodb-buffer-pool-resize.html>`_
+Prism v4 works so differently from v3, conversions would be effectively useless.
 
 1. v4's data serialization process is far better than v3, however this means
-it's also incompatible. Lookups will generally work for blocks but rollbacks will not. (Invalid 
-data should be safely skipped.) Entity data is pretty much inaccessible.
+it's also incompatible. Lookups will generally work but rollbacks will not. (Invalid 
+data should be safely skipped.)
 
 2. v3 tracked non-player "causes" as fake players. v4 can't separate those when migrating data.
+
+3. v4 uses "descriptors" to summarize data while v3 used live objects. There's no way to convert so v3 data will be generic.
 
