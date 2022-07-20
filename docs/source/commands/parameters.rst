@@ -153,6 +153,15 @@ If you're standing at (x/y/z) 0,0,0 and use ``r:5``, the search will find record
 
 This parameter automatically limits the search to your current world.
 
+.. _reversed:
+
+Reversed Parameter
+------------------
+
+Use the ``reversed:(true|false)`` parameter to include/exclude activities which have been reversed.
+
+``reversed:true`` means a record has been rolled back by a user or plugin using Prism's API. ``reversed:false`` means the end result remains in-world or has been restored by a user or plugin using Prism's API.
+
 .. _since:
 
 Since Parameter
