@@ -8,8 +8,8 @@ Requirements
 
 * Bukkit-based server, primarily Spigot, Paper, or Purpur.
 * One of the following databases:
-   * MySQL 8+
-   * MariaDB 10.2+
+   * MySQL (Strong recommend v8+, older versions supported with config flag)
+   * MariaDB (Strong recommend v10.2+, older versions supported with config flag)
 
 .. _installation:
 
