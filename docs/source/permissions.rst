@@ -1,6 +1,10 @@
 Permissions
 ===========
 
-Content coming soon.
+.. note::
 
-Current dev builds of Prism v4 do not use permissions.
+    We'll soon expand the permission system but we're waiting for support from our command library.
+
+``prism.admin``
+
+Grants access to all commands.
