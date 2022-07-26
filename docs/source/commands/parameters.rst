@@ -47,9 +47,9 @@ Use the ``at:[x],[y],[z]`` parameter to confine or center the search on a single
 
 For example, ``at:0,0,0`` would search exclusively for activities affecting that block. 
 
-The :ref:`radius`, :ref:`in<in:chunk>` pr :ref:`world` parameters will use `this` location as the center instead of your player's location.
+If defined, this location will be used as the center for the :ref:`radius`, :ref:`in`, and :ref:`world` parameters (instead of your player's location).
 
-This can make it easy to search for a radius around a location you're not currently at.
+This can make it easy to search for a radius around a location you're not currently at or from the console.
 
 .. _before:
 
