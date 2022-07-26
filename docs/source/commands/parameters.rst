@@ -64,6 +64,15 @@ For help with time codes, see :ref:`timecodes`.
 
 Also see :ref:`since`.
 
+.. _bounds:
+
+Bounds Parameter
+----------------
+
+Use the ``bounds:[minX],[minY],[minZ]-[maxX],[maxY],[maxZ]`` parameter to search within a rectangular region, defined by a "min" and "max" coordinate (a.k.a. the corners of a box).
+
+For example, ``bounds:0,0,0-10,10,10`` would search exclusively for activities within a rectangle starting at ``0,0,0`` and ending at ``10,10,10``.
+
 .. _cause:
 
 Cause Parameter

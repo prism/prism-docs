@@ -33,7 +33,7 @@ Add prism-api to your maven pom.xml or build.gradle.
 
             repositories {
                 maven {
-                    url = "https://nexus.darkhelmet.network/repository/maven-snapshots/t"
+                    url = "https://nexus.darkhelmet.network/repository/maven-snapshots/"
                 }
                 maven {
                     url = "https://nexus.darkhelmet.network/repository/maven-releases/"
