@@ -5,7 +5,7 @@ Add prism-api to your maven pom.xml or build.gradle.
 
 .. tabs::
 
-    .. group-tab:: Maven
+    .. tab:: Maven
 
         .. code:: xml
 
@@ -27,7 +27,7 @@ Add prism-api to your maven pom.xml or build.gradle.
                 <scope>provided</scope>
             </dependency>
 
-    .. group-tab:: Gradle (Groovy)
+    .. tab:: Gradle (Groovy)
 
         .. code:: groovy
 
