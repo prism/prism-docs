@@ -101,7 +101,7 @@ body {
 	color: rgb(207 250 254);
 }
 
-.highlight .n {
+.highlight .n, .highlight .nt {
 	color: #9df5e5;
 }
 
@@ -113,7 +113,7 @@ body {
 	color: #ffdb9e;
 }
 
-.highlight .kt, .highlight .s, .highlight .mi {
+.highlight .kt, .highlight .s, .highlight .mi, .highlight .s2 {
 	color: #fff;
 }
 

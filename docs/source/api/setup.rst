@@ -21,7 +21,7 @@ Add prism-api to your maven pom.xml or build.gradle.
             </repositories>
 
             <dependency>
-                <groupId>me.botsko</groupId>
+                <groupId>network.darkhelmet</groupId>
                 <artifactId>prism-api</artifactId>
                 <version>1.0.0-SNAPSHOT</version>
                 <scope>provided</scope>

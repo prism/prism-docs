@@ -30,10 +30,8 @@ Shared servers...
 
 .. _goodhabits:
 
-Good Habits
------------
-
-(aka, What You Can Do)
+What You Can Do
+---------------
 
 The more data you log and the longer you keep it, the more disk space the db needs. The larger a db gets, the longer your queries will take to find data.
 
