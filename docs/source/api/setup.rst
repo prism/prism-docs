@@ -11,11 +11,11 @@ Add prism-api to your maven pom.xml or build.gradle.
 
             <repositories>
                 <repository>
-                    <name>addstar-maven-snapshots</name>
+                    <name>prism-maven-snapshots</name>
                     <url>https://nexus.darkhelmet.network/repository/maven-snapshots/</url>
                 </repository>
                 <repository>
-                    <name>addstar-maven-releases</name>
+                    <name>prism-maven-releases</name>
                     <url>https://nexus.darkhelmet.network/repository/maven-releases/</url>
                 </repository>
             </repositories>
