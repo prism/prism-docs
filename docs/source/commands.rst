@@ -12,4 +12,5 @@ All commands are prefixed with ``prism`` (or ``pr`` for short).
    commands/restore
    commands/preview
    commands/parameters
+   commands/extinguish
    

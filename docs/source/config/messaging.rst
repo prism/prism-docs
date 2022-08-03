@@ -6,7 +6,7 @@ Localization
 
 Prism supports expanding the languages used in-game through a ``Prism/locale/messages/message-(lang).properties``.
 
-Create a new language file by copying an existing one and edit the ``defautLocale`` config in the prism configuration file.
+Create a new language file by copying an existing one and edit the ``defaultLocale`` config in the prism configuration file.
 
 Prism will also try to use the language file that a user's Minecraft client is set to, if it's available.
 
