@@ -11,15 +11,7 @@ storage.conf
 
 The storage configuration file allows you to choose which storage engine is used, and configure connection addresses/credentials as needed.
 
-Currently, only MySQL/MariaDB is supported.
-
-.. _mysql-deprecated:
-
-``mysql-deprecated``
-
-A MySQL feature Prism v3 used to calculate total rows in a lookup has been deprecated in newer versions and was never ideal to begin with.
-
-Prism v4, by default, uses features available in MySQL 8+ and MariaDB 10.2+ that replace the older functionality. However, Prism still supports the old method because we know some users don't have the option to use newer database versions.
+Currently, there is no way to import data from one storage engine to another.
 
 HikariCP
 --------

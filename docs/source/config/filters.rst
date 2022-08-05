@@ -109,6 +109,6 @@ Conflicting Filters
 
 Be careful to avoid writing conflicting filters. Prism currently has limited validation and relies on the above logic when deciding what to apply. Nothing should explode but you're going to confuse yourself as to why filters aren't working.
 
-For example if you write a filter that **ignores** dirt breaks server-side, and a filter that **allows** dirt breaks in a world named "towny", per the logic described above, only the first filter will apply.
+For example if you write a filter that **ignores** dirt breaks server-wide, and a filter that **allows** dirt breaks in a world named "towny", per the logic described above, only the first filter will apply.
 
 To fix this scenario, the first filter can be removed entirely. A filter that allows dirt breaks in a specific world will automatically ignore dirt breaks in other worlds.

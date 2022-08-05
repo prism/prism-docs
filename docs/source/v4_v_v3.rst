@@ -1,25 +1,27 @@
-v4_v_v3
-=======
+v4 versus v3
+============
 
-Prism version 4 (v4) is a complete rewrite. v3 was nearly a decade old and never kept up with Minecraft or the development community. While v4 will feel extremely familiar, there are some important differences.
+Prism version 4 is a complete rewrite. v3 was nearly a decade old and never kept up with Minecraft or the development community. While v4 will feel extremely familiar, there are some important differences.
 
 .. _differences:
 
 * Improved database design.
 * Far more robust rollbacks in far less code thanks to NBT-based serialization.
-* Vastly superior filter system.
+* Vastly superior filter and configuration system.
 * Improved localization support.
 * Fully formattable command output.
 * Proper support for MySQL/MariaDB's `ONLY_FULL_GROUP_BY` mode.
+* Support for H2 and Postgres databases.
+* Support for stored procedures (as of writing for MySQL/MariaDB only. Postgres planned.)
+* Improved cache system.
+* Better API.
 
 .. _upgrading:
 
 Upgrading
 ---------
 
-Unfortunately there is no way to convert between v3 databases and v4.
-
-Prism v4 works so differently from v3, conversions would be effectively useless.
+Unfortunately there is no way to convert between v3 databases and v4. This was a tough decision but Prism v4 works so differently from v3, conversions would be effectively useless.
 
 1. v4's data serialization process is far better than v3, however this means
 it's also incompatible. Lookups will generally work but rollbacks will not. (Invalid 
