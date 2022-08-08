@@ -23,6 +23,7 @@ Contents
    permissions
    modifications
    wands
+   purges
    api
 
 
