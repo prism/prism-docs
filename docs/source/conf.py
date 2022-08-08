@@ -6,8 +6,8 @@ project = 'prism'
 copyright = '2012 & 2022, viveleroi'
 author = 'viveleroi'
 
-release = '0.1'
-version = '0.1.0'
+release = '4.0'
+version = '0.0.0'
 
 # -- General configuration
 
