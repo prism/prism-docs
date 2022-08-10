@@ -27,11 +27,25 @@ The following is a list of all actions Prism v4 can monitor.
 +-----------------+----------------------------------+----------+-------------+
 | block-place     | blocks placed                    | Yes      | Yes         |
 +-----------------+----------------------------------+----------+-------------+
+| block-shift     | blocks moved by pistons          | No       | Yes         |
++-----------------+----------------------------------+----------+-------------+
 | block-spread    | blocks spreading/growing         | No       | Yes         |
++-----------------+----------------------------------+----------+-------------+
+| bucket-empty    | player empties bucket contents   | Yes      | Yes         |
++-----------------+----------------------------------+----------+-------------+
+| bucket-fill     | player fills bucket              | Yes      | Yes         |
++-----------------+----------------------------------+----------+-------------+
+| entity-dye      | player dyes entity (aka sheep)   | Yes      | Yes         |
++-----------------+----------------------------------+----------+-------------+
+| entity-eat      | entity eats (aka sheep)          | Yes      | Yes         |
 +-----------------+----------------------------------+----------+-------------+
 | entity-kill     | mobs killed                      | Yes      | Yes         |
 +-----------------+----------------------------------+----------+-------------+
+| fluid-flow      | water/lava flows (not breaks)    | No       | Yes         |
++-----------------+----------------------------------+----------+-------------+
 | hanging-break   | frames/paintings broken          | Yes      | Yes         |
++-----------------+----------------------------------+----------+-------------+
+| item-dispense   | items dispensed by dispenser     | Yes      | Yes         |
 +-----------------+----------------------------------+----------+-------------+
 | item-drop       | items dropped by player          | Yes      | Yes         |
 +-----------------+----------------------------------+----------+-------------+
@@ -60,6 +74,7 @@ Several events are disabled by default because they `mostly` log natural events 
 - ``block-fade`` - Snow melt, grass/nylium blocks fading into dirt/netherrack, etc.
 - ``block-form`` - Snow fall, obsidian formation, etc.
 - ``block-spread`` - Vine, amethyst, mushroom, and other growth. Grass, mycelium, and mushrooms, spreading.
+- ``fluid-flow`` - Tracks the flow of fluids. Strongly recommend a drain tool. Still tracks flow breaking blocks.
 
 If you plan to enable any of these, we *strongly* recommend you use a filter or increase their purge rate.
 
