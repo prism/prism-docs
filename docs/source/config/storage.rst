@@ -16,7 +16,7 @@ Currently, there is no way to import data from one storage engine to another.
 HikariCP
 --------
 
-Prism uses `HikariCP<https://github.com/brettwooldridge/HikariCP>`_ for database connection pooling. Prism builds a configuration for you that's optimized for most use cases.
+Prism uses `HikariCP <https://github.com/brettwooldridge/HikariCP>`_ for database connection pooling. Prism builds a configuration for you that's optimized for most use cases.
 
 However, you can define a custom ``hikari.properties`` file in the plugin's configuration folder. 
 

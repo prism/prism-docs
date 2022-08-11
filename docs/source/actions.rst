@@ -7,6 +7,10 @@ Actions
 
 Prism records most actions by default but they can be disabled in the config.
 
+.. note::
+
+    Many actions that were separate in v3 are now combined, making this list appear shorter than it is. For example, any mob/liquid break is just ``block-break`` with appropriate causes.
+
 The following is a list of all actions Prism v4 can monitor.
 
 - `Default` indicates whether Prism monitors this action by default. Some are disabled for performance or spam reasons.
@@ -23,13 +27,17 @@ The following is a list of all actions Prism v4 can monitor.
 +-----------------+----------------------------------+----------+-------------+
 | block-form      | blocks forming (snow, obsidian)  | No       | Yes         |
 +-----------------+----------------------------------+----------+-------------+
-| block-ignite    | blocks set on fire               | Yes      | No          |
+| block-ignite    | blocks set on fire               | Yes      | No*         |
 +-----------------+----------------------------------+----------+-------------+
 | block-place     | blocks placed                    | Yes      | Yes         |
 +-----------------+----------------------------------+----------+-------------+
 | block-shift     | blocks moved by pistons          | No       | Yes         |
 +-----------------+----------------------------------+----------+-------------+
 | block-spread    | blocks spreading/growing         | No       | Yes         |
++-----------------+----------------------------------+----------+-------------+
+| block-use       | player uses a block              | Yes      | No          |
++-----------------+----------------------------------+----------+-------------+
+| bonemeal-use    | player uses bonemeal             | Yes      | No*         |
 +-----------------+----------------------------------+----------+-------------+
 | bucket-empty    | player empties bucket contents   | Yes      | Yes         |
 +-----------------+----------------------------------+----------+-------------+
@@ -39,17 +47,31 @@ The following is a list of all actions Prism v4 can monitor.
 +-----------------+----------------------------------+----------+-------------+
 | entity-eat      | entity eats (aka sheep)          | Yes      | Yes         |
 +-----------------+----------------------------------+----------+-------------+
+| entity-leash    | player leashes an entity         | Yes      | No          |
++-----------------+----------------------------------+----------+-------------+
 | entity-kill     | mobs killed                      | Yes      | Yes         |
++-----------------+----------------------------------+----------+-------------+
+| entity-shear    | entity is sheared                | Yes      | Yes         |
++-----------------+----------------------------------+----------+-------------+
+| entity-unleash  | entity is unleashed              | Yes      | No          |
 +-----------------+----------------------------------+----------+-------------+
 | fluid-flow      | water/lava flows (not breaks)    | No       | Yes         |
 +-----------------+----------------------------------+----------+-------------+
 | hanging-break   | frames/paintings broken          | Yes      | Yes         |
 +-----------------+----------------------------------+----------+-------------+
+| inventory-open  | player accesses an inventory     | Yes      | No          |
++-----------------+----------------------------------+----------+-------------+
 | item-dispense   | items dispensed by dispenser     | Yes      | Yes         |
 +-----------------+----------------------------------+----------+-------------+
 | item-drop       | items dropped by player          | Yes      | Yes         |
 +-----------------+----------------------------------+----------+-------------+
+| item-insert     | items inserted into an inventory | Yes      | Yes         |
++-----------------+----------------------------------+----------+-------------+
 | item-pickup     | mob/player picking up items      | Yes      | No          |
++-----------------+----------------------------------+----------+-------------+
+| item-remove     | items removed from an inventory  | Yes      | Yes         |
++-----------------+----------------------------------+----------+-------------+
+| item-throw      | mob/player throwing items        | Yes      | No          |
 +-----------------+----------------------------------+----------+-------------+
 | player-join     | player connecting to server      | No       | No          |
 +-----------------+----------------------------------+----------+-------------+
@@ -65,6 +87,16 @@ The following is a list of all actions Prism v4 can monitor.
 +-----------------+----------------------------------+----------+-------------+
 | xp-pickup       | player gains XP                  | No       | No          |
 +-----------------+----------------------------------+----------+-------------+
+
+- * Action is not reversible but may produce other events which are.
+
+Paper-Only
+----------
+
+Some actions are only available, or have improved coverage on Paper-based servers.
+
+- ``block-ignite`` - Improved detection for the ignition source of TNT.
+
 
 Natural Spam
 ------------
