@@ -27,6 +27,8 @@ The following is a list of all actions Prism v4 can monitor.
 +-----------------+----------------------------------+----------+-------------+
 | block-form      | blocks forming (snow, obsidian)  | No       | Yes         |
 +-----------------+----------------------------------+----------+-------------+
+| block-harvest   | harvest crop w/out break         | Yes      | No          |
++-----------------+----------------------------------+----------+-------------+
 | block-ignite    | blocks set on fire               | Yes      | No*         |
 +-----------------+----------------------------------+----------+-------------+
 | block-place     | blocks placed                    | Yes      | Yes         |
@@ -59,6 +61,8 @@ The following is a list of all actions Prism v4 can monitor.
 +-----------------+----------------------------------+----------+-------------+
 | hanging-break   | frames/paintings broken          | Yes      | Yes         |
 +-----------------+----------------------------------+----------+-------------+
+| hanging-place   | frames/paintings placed          | Yes      | Yes         |
++-----------------+----------------------------------+----------+-------------+
 | inventory-open  | player accesses an inventory     | Yes      | No          |
 +-----------------+----------------------------------+----------+-------------+
 | item-dispense   | items dispensed by dispenser     | Yes      | Yes         |
@@ -88,7 +92,7 @@ The following is a list of all actions Prism v4 can monitor.
 | xp-pickup       | player gains XP                  | No       | No          |
 +-----------------+----------------------------------+----------+-------------+
 
-- * Action is not reversible but may produce other events which are.
+Asterisk (*) means action is not reversible but may produce other events which are.
 
 Paper-Only
 ----------
