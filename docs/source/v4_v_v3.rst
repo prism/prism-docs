@@ -24,11 +24,11 @@ Upgrading
 
 Unfortunately there is no way to convert between v3 databases and v4. This was a tough decision but Prism v4 works so differently from v3, conversions would be effectively useless.
 
-v4's data serialization process is far better than v3, however this means
-it's also incompatible. Lookups will generally work but rollbacks will not. (Invalid 
-data should be safely skipped.)
+v4's data serialization process is far better than v3. However this means they're not compatible and there's no way to convert.
 
-v3 tracked non-player "causes" as fake players. v4 can't separate those when migrating data.
+v3 relied on "rebuilding" objects to present lookup information while v4 stores that data (to improve web ui support, other future projects). There's no way to convert that data as it wasn't persisted.
+
+v3 tracked non-player "causes" as fake players. v4 couldn't separate those when migrating data.
 
 v4 uses "descriptors" to summarize data while v3 used live objects. There's no way to convert so v3 data will be generic.
 
