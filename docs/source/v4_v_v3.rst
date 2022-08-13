@@ -29,6 +29,3 @@ v4's data serialization process is far better than v3. However this means they'r
 v3 relied on "rebuilding" objects to present lookup information while v4 stores that data (to improve web ui support, other future projects). There's no way to convert that data as it wasn't persisted.
 
 v3 tracked non-player "causes" as fake players. v4 couldn't separate those when migrating data.
-
-v4 uses "descriptors" to summarize data while v3 used live objects. There's no way to convert so v3 data will be generic.
-
