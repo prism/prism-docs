@@ -5,7 +5,7 @@ Prism can modify the world in a variety of ways. It's important to understand th
 
 .. note::
 
-    Modifications are inherently dangerous and should be used by server staff. We highly recommend practicing on a test server or using preview modes when possible. One mis-used command could rollback days worth of changes, memory crashes, or other unwanted results.
+    Modifications are inherently dangerous and should only be used by server staff. We highly recommend practicing on a test server or using preview modes when possible. One mis-used command could rollback days worth of changes, cause memory crashes, or other unwanted results.
 
 .. _rollbacks:
 

@@ -3,7 +3,7 @@ Purges
 
 Purges will delete activity records from your database.
 
-Purges can be run manually.
+Purges can be run manually, but normally will run on a schedule to clear old data.
 
 .. note::
 

@@ -94,14 +94,6 @@ The following is a list of all actions Prism v4 can monitor.
 
 Asterisk (*) means action is not reversible but may produce other events which are.
 
-Paper-Only
-----------
-
-Some actions are only available, or have improved coverage on Paper-based servers.
-
-- ``block-ignite`` - Improved detection for the ignition source of TNT.
-
-
 Natural Spam
 ------------
 

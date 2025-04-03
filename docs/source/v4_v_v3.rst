@@ -5,17 +5,32 @@ Prism version 4 is a complete rewrite. v3 was nearly a decade old and never kept
 
 .. _differences:
 
-* Improved database design.
-* Far more robust rollbacks in far less code thanks to NBT-based serialization.
+* Complete rewrite from v3.
+* Sane permission system.
+* Utilizes wider range of trusted libraries.
+* Improved cache system.
+
+``Database:``
+
+* Support for MySQL, MariaDB, H2, and Postgres databases.
+* Improved log file entries to help diagnose issues and understand your database's capabilities.
+* Improved schema.
+* Better queries and smarter result sorting for rollbacks.
+* Proper support for MySQL/MariaDB's `ONLY_FULL_GROUP_BY` mode.
+* Utilizes stored procedures when possible to reduce network traffic (as of writing for MySQL/MariaDB only. Postgres planned.)
+
+``Actions``
+
+* Improved action data serialization (no more custom serializing for everything).
+* Drops irrelevant actions from v3 and added new ones for modern MC.
+
+``Configuration``
+
+* Commented/well-documented configuration files.
 * Vastly superior filter and configuration system.
 * Improved localization support.
 * Highly formattable/colorable command output.
-* Proper support for MySQL/MariaDB's `ONLY_FULL_GROUP_BY` mode.
-* Support for H2 and Postgres databases.
-* Support for stored procedures (as of writing for MySQL/MariaDB only. Postgres planned.)
-* Drops irrelevant actions from v3 and added new ones for modern MC.
-* Improved cache system.
-* Better API.
+* Intuitive configuration options.
 
 .. _upgrading:
 

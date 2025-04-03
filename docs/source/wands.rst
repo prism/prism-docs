@@ -1,7 +1,7 @@
 Wands
 =====
 
-A "wand" is an action tied to your ingame-player's "hand".
+A "wand" is a magic Prism "tool" tied to your ingame-player's "hand". Wands are triggered for a single block space when you use them.
 
 .. _activate-wand:
 
