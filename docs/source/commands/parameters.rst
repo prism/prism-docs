@@ -64,6 +64,21 @@ For help with time codes, see :ref:`timecodes`.
 
 Also see :ref:`since`.
 
+Block Tags Parameter
+--------------------
+
+Use the ``btag:[blocks tag]`` parameter to more efficiently search for materials included in the tag.
+
+Tags are a Minecraft concept for organizing blocks, items, and entities into groups. There are quite a lot already defined in Minecraft but you can also create your own via datapacks.
+
+For example, ``btag:minecraft:dirt`` would search for any dirt-like materials including ``dirt``, ``coarse_dirt``, and ``podzol``. `See the full list <https://minecraft.wiki/w/Block_tag_(Java_Edition)#dirt>`_.
+
+You can even supply multiple tags, like ``btag:minecraft:corals,minecraft:coral_blocks,minecraft:coral_plants``.
+
+Defining your own tags would be an extremely powerful way to group materials. 
+
+Read more about `Tags <https://minecraft.wiki/w/Tag>`_.
+
 .. _bounds:
 
 Bounds Parameter

@@ -10,7 +10,7 @@ Prism version 4 is a complete rewrite. v3 was nearly a decade old and never kept
 * Utilizes wider range of trusted libraries for database support, caching, messaging, thread management, scheduling, and much more.
 
 Database:
-^^^^^^^^^
+---------
 
 * Support for MySQL, MariaDB, H2, and Postgres databases.
 * Improved log file entries to help diagnose issues and understand your database's capabilities.
@@ -20,14 +20,14 @@ Database:
 * Utilizes stored procedures when possible to reduce network traffic (as of writing for MySQL/MariaDB only. Postgres planned.)
 
 Actions
-^^^^^^^
+-------
 
 * Improved action data serialization (no more custom serializing for everything).
 * Renamed and reorganized a few for consistency.
 * Drops irrelevant actions from v3 and added new ones for modern MC.
 
 Configuration
-^^^^^^^^^^^^^
+-------------
 
 * Well-commented and intuitive configuration files.
 * Vastly superior filter system.
@@ -37,7 +37,7 @@ Configuration
 .. _upgrading:
 
 Upgrading
----------
+^^^^^^^^^
 
 Unfortunately there is no way to convert between v3 databases and v4. This was a tough decision but Prism v4 works so differently from v3, conversions would be effectively useless.
 
