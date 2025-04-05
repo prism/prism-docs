@@ -10,7 +10,6 @@ This documentation is exclusively for Prism version 4 and above. Currently, docu
 
    Prism v4 is under active development. It's possible that some of the features documented here change before final release.
 
-
 Contents
 --------
 
@@ -27,3 +26,12 @@ Contents
    wands
    purges
    api
+
+Recommendations
+---------------
+
+Preventing griefing is the first step in protecting your server.
+
+Prism is the tool you need to handle griefing after it's occurred.
+
+We strongly recommend setting up a robust protection system to complement Prism. We recommend `GriefDefender <https://docs.griefdefender.com/>`_.

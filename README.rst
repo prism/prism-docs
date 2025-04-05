@@ -1,3 +1,4 @@
-# Prism Docs
+Prism Docs
+==========
 
 https://pygments.org/docs/lexers/
