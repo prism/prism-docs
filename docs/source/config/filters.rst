@@ -14,28 +14,39 @@ Writing Filters
 
 Prism does not generate any filters by default. In ``prism.conf``, look for the ``filters=[]`` config.
 
-Every filter must start with a **behavior**. Behavior determines if the filter will **ignore** or **allow** recording.
+Every filter must have:
+
+* A defined **behavior**
+* At least one **condition**
+
+The behavior determines if the filter will **ignore** or **allow** recording if the conditions are met.
 
 .. code-block::
 
 	filters=[
 	    {
-		    behavior: IGNORE
+			behavior: IGNORE
 	    }
 	]
 
 The ``behavior`` property must be set to one of these choices:
 
-* **ALLOW** - Only actions matching these conditions will be recorded.
-* **IGNORE** - Any actions matching these conditions will not be recorded.
+* **ALLOW** - Only actions matching all defined conditions will be recorded.
+* **IGNORE** - Any actions matching all defined conditions will not be recorded.
 
-Next, you need at least one **condition**. Conditions are how a filter matches activities.
+Next, you need at least one **condition**.
 
 Currently available conditions are:
 
-* ``worlds`` - A list of world names
-* ``materials`` - A list of block or item `Material <https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html>`_
 * ``actions`` - A list of actions (see :doc:`actions`)
+* ``block-tags`` - A list of block tags (see `Tags <https://minecraft.wiki/w/Tag>`_)
+* ``item-tags`` - A list of item tags (see `Tags <https://minecraft.wiki/w/Tag>`_)
+* ``materials`` - A list of block or item `Material <https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html>`_
+* ``worlds`` - A list of world names
+
+All defined condition properties must be met for a filter to apply - except variations like block-tags, item-tags, and materials - they're just different ways of definings materials.
+
+A condition is considered a match if at least one value matches the activity.
 
 To achieve our example of ignoring common blocks in a resource world, we could use this:
 
@@ -44,14 +55,12 @@ To achieve our example of ignoring common blocks in a resource world, we could u
 	filters=[
 	    {
 	        behavior=IGNORE
+			block-tags=[
+				"minecraft:dirt",
+				"minecraft:base_stone_overworld",
+				"minecraft:sand"
+			]
 	        materials=[
-	            dirt,
-	            grass_block,
-	            stone,
-	            diorite,
-	            granite,
-	            sand,
-	            red_sand,
 	            gravel
 	        ]
 	        worlds=[
@@ -60,18 +69,22 @@ To achieve our example of ignoring common blocks in a resource world, we could u
 	    }
 	]
 
-This would match all actions that involve dirt, grass_block, etc, only in the world "resource". Because it's set to ignore, this will prevent prism from recording these events. 
+This would match all activities that:
 
-The list of blocks to ignore might get very long in this scenario. Instead, we could write this to specifically allow blocks:
+* Involve blocks included in those Minecraft tags
+* Occur in the world named "resource". 
+
+Because it's set to ignore, this will prevent prism from recording these events. 
+
+Or you can reverse your approach and whitelist the blocks you want to record using ``ALLOW``:
 
 .. code-block::
 
 	filters=[
 	    {
 	        behavior=ALLOW
-	        materials=[
-	            diamond_ore,
-	            deepslate_diamond_ore
+	        block-tag=[
+	            prism:all_ores
 	        ]
 	        worlds=[
 	            resource
@@ -79,6 +92,9 @@ The list of blocks to ignore might get very long in this scenario. Instead, we c
 	    }
 	]
 
+.. note::
+
+   The ``prism:all_ores`` tag is a custom tag included in our datapack, which must be installed. You can use any default or custom tag.
 
 .. _logic:
 
@@ -91,24 +107,10 @@ It's important to understand how filters are applied.
 
 The first filter defined in ``prism.conf`` will be the first filter an activity is checked against.
 
-
 **The first matching filter will be the decider for recording an activity.**
 
 If all filter conditions match, the filter will allow/ignore the activity and additional filters will **not** be checked.
 
-
 **Missing conditions will automatically match.**
 
 For example, if you don't define a list of ``worlds`` or leave it empty, the filter will match **any** world. In the examples above, I don't filter by any cause so every single cause will be considered a "match".
-
-
-.. _conflicting:
-
-Conflicting Filters
--------------------
-
-Be careful to avoid writing conflicting filters. Prism currently has limited validation and relies on the above logic when deciding what to apply. Nothing should explode but you're going to confuse yourself as to why filters aren't working.
-
-For example if you write a filter that **ignores** dirt breaks server-wide, and a filter that **allows** dirt breaks in a world named "towny", per the logic described above, only the first filter will apply.
-
-To fix this scenario, the first filter can be removed entirely. A filter that allows dirt breaks in a specific world will automatically ignore dirt breaks in other worlds.
