@@ -42,6 +42,7 @@ Currently available conditions are:
 * ``block-tags`` - A list of block tags (see `Tags <https://minecraft.wiki/w/Tag>`_)
 * ``item-tags`` - A list of item tags (see `Tags <https://minecraft.wiki/w/Tag>`_)
 * ``materials`` - A list of block or item `Material <https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html>`_
+* ``permissions`` - A list of player permissions (see :doc:`permissions`)
 * ``worlds`` - A list of world names
 
 All defined condition properties must be met for a filter to apply - except variations like block-tags, item-tags, and materials - they're just different ways of definings materials.
