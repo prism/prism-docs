@@ -20,12 +20,35 @@ Deleting older or unnecessary data from your database is important for its healt
 
 The less data prism has to search, the faster it can search it.
 
+Scheduling Purges
+-----------------
+
+Purges are typically run on a schedule.
+
+You can configure multiple purge rules by using a purge command with parameters and a schedule.
+
+The following example runs the command ``prism purge before:6w -nodefaults`` every day at midnight.
+
+A "cron" is a statement used to define schedules. Values provided for seconds, minutes, hours, days, etc dictate when the scheduled job occurs.
+
+See `cron expression generator <https://www.freeformatter.com/cron-expression-generator-quartz.html>`_
+
+.. code-block:: hocon
+
+    command-schedules=[
+        {
+            command="prism purge before:6w -nodefaults"
+            cron="0 0 0 ? * * *"
+            enabled=true
+        }
+    ]
+
 Purges and Databases
 --------------------
 
 Databases lock affected rows when deleting or updating and this can affect other queries. Not just searches but new data waiting for insert.
 
-For example MySQL and MariaDB have ``innodb_buffer_pool`` which is an allocation of memory for these locks.
+For example MySQL and MariaDB have ``innodb_buffer_pool_size`` which is an allocation of memory for these locks.
 
 By default, it can sometimes be comically small. Prism prints this value to your console on startup.
 

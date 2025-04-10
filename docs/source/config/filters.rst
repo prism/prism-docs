@@ -21,13 +21,13 @@ Every filter must have:
 
 The behavior determines if the filter will **ignore** or **allow** recording if the conditions are met.
 
-.. code-block::
+.. code-block:: hocon
 
-	filters=[
-	    {
-			behavior: IGNORE
-	    }
-	]
+    filters=[
+        {
+            behavior: IGNORE
+        }
+    ]
 
 The ``behavior`` property must be set to one of these choices:
 
@@ -40,6 +40,9 @@ Currently available conditions are:
 
 * ``actions`` - A list of actions (see :doc:`actions`)
 * ``block-tags`` - A list of block tags (see `Tags <https://minecraft.wiki/w/Tag>`_)
+* ``causes`` - A list of causes
+* ``entity-types`` - A list of `Entity Types <https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html>`_
+* ``entity-type-tags`` - A list of entity type tags (see `Tags <https://minecraft.wiki/w/Tag>`_)
 * ``item-tags`` - A list of item tags (see `Tags <https://minecraft.wiki/w/Tag>`_)
 * ``materials`` - A list of block or item `Material <https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html>`_
 * ``permissions`` - A list of player permissions (see :doc:`permissions`)
@@ -51,24 +54,24 @@ A condition is considered a match if at least one value matches the activity.
 
 To achieve our example of ignoring common blocks in a resource world, we could use this:
 
-.. code-block::
+.. code-block:: hocon
 
-	filters=[
-	    {
-	        behavior=IGNORE
-			block-tags=[
-				"minecraft:dirt",
-				"minecraft:base_stone_overworld",
-				"minecraft:sand"
-			]
-	        materials=[
-	            gravel
-	        ]
-	        worlds=[
-	            resource
-	        ]
-	    }
-	]
+    filters=[
+        {
+            behavior=IGNORE
+            block-tags=[
+                "minecraft:dirt",
+                "minecraft:base_stone_overworld",
+                "minecraft:sand"
+            ]
+            materials=[
+                gravel
+            ]
+            worlds=[
+                resource
+            ]
+        }
+    ]
 
 This would match all activities that:
 
@@ -79,19 +82,19 @@ Because it's set to ignore, this will prevent prism from recording these events.
 
 Or you can reverse your approach and whitelist the blocks you want to record using ``ALLOW``:
 
-.. code-block::
+.. code-block:: hocon
 
-	filters=[
-	    {
-	        behavior=ALLOW
-	        block-tag=[
-	            prism:all_ores
-	        ]
-	        worlds=[
-	            resource
-	        ]
-	    }
-	]
+    filters=[
+        {
+            behavior=ALLOW
+            block-tag=[
+                prism:all_ores
+            ]
+            worlds=[
+                resource
+            ]
+        }
+    ]
 
 .. note::
 

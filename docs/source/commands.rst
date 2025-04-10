@@ -3,6 +3,8 @@ Commands
 
 All commands are prefixed with ``prism`` (or ``pr`` for short).
 
+The most important concept in Prism commands are :doc:`parameters`. Multiple commands accept parameters (lookup, rollback, restore, preview, and purge).
+
 .. toctree::
 
    commands/about

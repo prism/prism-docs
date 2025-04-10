@@ -5,7 +5,7 @@ Databases
 
 Prism, like all logging plugins, goes **heavy on database**. 
 
-Prism's database schema and connection pools are configured for the best performance we can provide but because there are a wide variety of database servers and a wide variety of use cases for prism, you may need to adjust things.
+Prism's database schema and connection pools are configured for the best performance we can provide but because there are a wide variety of use cases, you may need to adjust things.
 
 .. _db101:
 
@@ -18,8 +18,6 @@ A database is a place prism can store and easily search and retreive all of the 
 
 You'll either get one from your server hosting company (they'll give you the connection address and credentials) or you'll install a database server yourself.
 
-Shared hosting companies typically provide MySQL databases. 
-
 We understand that many users will have a database from a shared hosting company but there are several downsides to this:
 
 Shared servers...
@@ -27,6 +25,7 @@ Shared servers...
 - Split resources among potentially thousands of customers. This significantly reduces performance.
 - May be in another country, increasing network latency (how long it takes your server to talk to the db).
 - Lock configuration settings for what most users need. You can't fine-tune the db to your needs.
+- Limit privileges so you can't utilize stored procedures.
 
 .. _goodhabits:
 
@@ -35,8 +34,6 @@ What You Can Do
 
 The more data you log and the longer you keep it, the more disk space the db needs. The larger a db gets, the longer your queries will take to find data.
 
-We've tried our best to create a schema that uses only as much disk space as needed, and indexes the data properly. However, it may be worth your time to customize indexes for your search habits because there's never an index that fits everyone's usage.
-
 Here are some good habits to avoid unnecessary data:
 
 - Review your actions config and disable any that you don't want logged.
@@ -44,16 +41,22 @@ Here are some good habits to avoid unnecessary data:
 - Review your purge rules to discard data.
 - Keep an eye on your database size and adjust the above to keep a good balance.
 
+We've tried our best to create a good schema. We'll continue to make improvements. You can always make structure or index schema changes to better align with how you use Prism.
+
 .. _prism:
 
 What Prism Does
 ---------------
 
-Out of the box, Prism does a lot to improve performance.
+Out of the box, Prism does a lot for performance.
+
+**Asynchronous Tasks**
+
+Prism executes queries on another thread, some the game thread is not blocked.
 
 **Connection Pooling**
 
-Prism uses a connection pool. (For SQL servers, Hikari). This reduces overhead needed to communicate with the database server by reusing connections. Reduce, reuse, recycle!
+Prism uses a connection pool (HikariCP). This reduces overhead needed to communicate with the database server by reusing connections. Reduce, reuse, recycle!
 
 **Statement Batching**
 
@@ -63,13 +66,13 @@ You can adjust the batch size as needed - lower sizes send batches more often bu
 
 **Hikari Optimizations**
 
-Prism uses the recommended Hikari optimizations for MySQL servers. This includes settings like increased statement caching, etc.
+Prism uses the recommended Hikari optimizations for MySQL/MariaDB servers. This includes settings like increased statement caching, etc.
 
-**Procedures**
+**Stored Procedures**
 
-Procedures move complex db queries/logic to the database server which reduces connection use and how much data is sent over the network. For example, Prism uses procedures to create the activity record and relational data. This becomes a single procedure call versus multiple sql statements.
+Stored procedures/functions can move complex db queries/logic to the database server which reduces network traffic. Things that might take multiple queries from Prism become only a single procedure call.
 
 .. note::
 
-    This feature is limited to users who have db server permissions to create procedures. Usually that means only those running their own db server.
+    This feature is limited to users who have database permission to create procedures/functions. That's common on shared hosts, especially in MySQL/MariaDB.
 

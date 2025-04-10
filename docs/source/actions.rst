@@ -5,8 +5,6 @@ Actions
 
 "Action Families" are related actions. They're related in that they share the second word, like ``block-break`` and ``hanging-break``. They're both "break" events.
 
-Prism records most actions by default but they can be disabled in the config.
-
 .. note::
 
     Many actions that were separate in v3 are now combined, making this list appear shorter than it is. For example, any mob/liquid break is just ``block-break`` with appropriate causes.
@@ -15,6 +13,8 @@ The following is a list of all actions Prism v4 can monitor.
 
 - `Default` indicates whether Prism monitors this action by default. Some are disabled for performance or spam reasons.
 - `Reversible` indicates whether the action can be reversed (see :doc:`modifications`)
+
+.. _actions:
 
 +-----------------+----------------------------------+----------+-------------+
 | Action          | Monitors                         | Default? | Reversible? |
@@ -105,37 +105,3 @@ Several events are disabled by default because they `mostly` log natural events 
 - ``fluid-flow`` - Tracks the flow of fluids. Strongly recommend a drain tool. Still tracks flow breaking blocks.
 
 If you plan to enable any of these, we *strongly* recommend you use a filter or increase their purge rate.
-
-Here are some example filters you might start with and tailor to suit your needs:
-
-.. code-block:: hocon
-
-    // Ignore block-fade for nylium into netherrack in the nether
-    {
-        actions=[
-            block-spread
-        ]
-        behavior=IGNORE
-        materials=[
-            cave_vines,
-            twisting_vines,
-            vine,
-            grass_block,
-            mycelium
-        ]
-        worlds=[]
-    }
-
-    // Ignore spread actions for all vines, grass, and mycelium
-    {
-        actions=[
-            block-spread
-        ]
-        behavior=ALLOW
-        materials=[
-            large_amethyst_bud,
-            medium_amethyst_bud,
-            small_amethyst_bud
-        ]
-        worlds=[]
-    }

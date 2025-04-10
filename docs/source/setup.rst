@@ -6,7 +6,7 @@ Setup
 Requirements
 ------------
 
-* Paper-based server jar (e.g. Paper or Purpur).
+* Bukkit/Spigot/Paper-based server jar.
 * One of the following databases:
    * MySQL v8.0.20+
    * MariaDB v10.7+

@@ -6,11 +6,11 @@ Parameters
 Parameters
 ----------
 
-Parameters are optional ways to filter query results. They're the same for lookups, rollbacks, restores, and purges.
+Parameters are optional ways to filter query results. They're the same for lookups, rollbacks, restores, previews, and purges.
 
 They are always entered after the command you're using. For example ``/pr lookup a:break p:viveleroi``.
 
-A query with no parameters will return everything.
+If no parameters are provided, Prism will use any configured defaults.
 
 Parameters act as an "AND" condition, but parameters that support multiple entries act as an "OR". You may need to run multiple commands if your parameters might conflict. For example ``p:viveleroi m:stone e:cow`` will return "No Results" because there's no way all three values can exist in a single record. If you truly need to be this exact, split it up into ``p:viveleroi m:stone`` and ``p:viveleroi e:cow``.
 
@@ -21,14 +21,10 @@ However, a single parameter that accepts multiple entries will work as expected.
 Actions Parameter
 -----------------
 
-Use the ``a:`` parameter to list one or more actions.
+Use the ``a:`` parameter to list one or more actions (see :doc:`actions`).
 
 * ``a:[action keys]``
 * ``a:[action families]``
-
-Supports multiple (comma seperated)!
-
-"Actions" are standardized names for "events" prism listens to. For example, ``block-break`` and ``item-drop``.
 
 The "action key" is a unique identifier for each action type, like ``block-break``.
 
@@ -43,13 +39,11 @@ To lookup multiple specific actions, use ``/pr l a:block-break,block-place`` (in
 At Parameter
 ----------------
 
-Use the ``at:[x],[y],[z]`` parameter to confine or center the search on a single coordinate. Similar to wand usage.
+Use the ``at:[x],[y],[z]`` parameter to confine or center the search on a single coordinate.
 
-For example, ``at:0,0,0`` would search exclusively for activities affecting that block. 
+For example, ``at:0,0,0`` by itself would search exclusively for activities affecting that single block. 
 
-If defined, this location will be used as the center for the :ref:`radius`, :ref:`in`, and :ref:`world` parameters (instead of your player's location).
-
-This can make it easy to search for a radius around a location you're not currently at or from the console.
+If used with :ref:`radius`, :ref:`in`, and :ref:`world` parameters, ``at`` will become the origin coordinate instead of your current location.
 
 .. _before:
 
@@ -120,9 +114,11 @@ Use the ``e:`` parameter to list one or more entity types.
 
 Supports multiple (comma seperated)!
 
-"EntityType" is a term the Bukkit API uses to define mobs that exist in vanilla Minecraft.
-
 ``e:cow`` will query activities that acted upon cows.
+
+See `Entity Types <https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html>`_.
+
+Also see :ref:`etag`.
 
 Item Tags Parameter
 --------------------
@@ -151,6 +147,8 @@ Use the ``in:(chunk|world)`` parameter to confine the search to a pre-defined bo
 
 This parameter automatically limits the search to your current world.
 
+This parameter cannot be used when also using the radius or world parameters.
+
 .. _materials:
 
 Materials Parameter
@@ -162,9 +160,11 @@ Use the ``m:`` parameter to list one or more materials.
 
 Supports multiple (comma seperated)!
 
-"Materials" is a term the Bukkit API uses to define blocks and items that exist in vanilla Minecraft.
+``m:stone`` will query activities that acted upon "stone" blocks.
 
-``m:stone`` will query activities that acted upon "stone" blocks. Currently matches are exact so you'll need to list every stone variant if you intend to include them.
+See `Material <https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html>`_.
+
+Also see :ref:`btag` or :ref:`itag`.
 
 .. _player:
 
@@ -199,7 +199,7 @@ Reversed Parameter
 
 Use the ``reversed:(true|false)`` parameter to include/exclude activities which have been reversed.
 
-``reversed:true`` means a record has been rolled back by a user or plugin using Prism's API. ``reversed:false`` means the end result remains in-world or has been restored by a user or plugin using Prism's API.
+``reversed:true`` means a record has been rolled back via Prism. ``reversed:false`` means the end result remains in-world or has been restored via Prism.
 
 .. _since:
 
@@ -230,7 +230,7 @@ For you current world, ``in:world`` works exactly the same.
 Timecodes
 ---------
 
-Prism uses a user-friendly short-hand to define a point in time. Timecodes can be used individually or combined.
+Prism uses a user-friendly shorthand to define a point in time. Timecodes can be used individually or combined.
 
 The available time codes are always in the format ``[number][unit]``:
 

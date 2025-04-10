@@ -1,7 +1,7 @@
 Welcome to Prism
 ================
 
-**Prism** is an event logging and grief-management plugin for `Paper <https://papermc.io/>`_-based servers. Prism supports rollbacks, restores, previews, 
+**Prism** is an event logging and grief-management plugin for `Spigot <https://www.spigotmc.org/>`_ or `Paper <https://papermc.io/>`_-based servers. Prism supports rollbacks, restores, previews, 
 wands, and more.
 
 This documentation is exclusively for Prism version 4 and above. Currently, documentation for version 3 is `available here <https://prism-bukkit.readthedocs.io/en/latest>`_

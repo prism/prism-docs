@@ -8,7 +8,7 @@ A "wand" is a magic Prism "tool" tied to your ingame-player's "hand". Wands are 
 Activate a Wand
 ---------------
 
-To active a wand, use its name in the wand command: ``pr wand inspect``.
+To activate a wand, use its name in the wand command: ``pr wand inspect``.
 
 .. _using-wand:
 
